@@ -13,11 +13,11 @@ if [[ -n $age && $age1 ]]; then     # runs if age and age1 are active
 
      for num in $(seq $age $age1)
      do 
-          awk -F "," ''/,$num,/' {print $0}' not.txt
+          awk -F "," ''/,$num,/' {print $0}' contact.txt
      done
 
 elif [[ -n $age ]]; then
-     awk -F "," ''/,$age,/' {print $0}' not.txt
+     awk -F "," ''/,$age,/' {print $0}' contact.txt
 	
 else
      echo "you must type something"
